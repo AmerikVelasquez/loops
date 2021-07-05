@@ -23,8 +23,11 @@ function robo(userInput) {
 
 
 $(document).ready(function(){
-  $().submit(function(event){
+  $("#inputData").submit(function(event){
     event.preventDefault();
-
+    let data = $("#userInput").val();
+    const traverse  = robo(data);
+    $("#result").text(traverse)
+    $("#final").show();
   });
 });
